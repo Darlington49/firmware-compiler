@@ -25,5 +25,5 @@ jobs:
       - name: Save Output
         uses: actions/upload-artifact@v2
         with:
-          name: code-coverage-report
+          name: Package
           path: build/blink.bin
