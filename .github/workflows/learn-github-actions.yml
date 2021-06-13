@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Build the Docker image
-      - uses: docker://espressif/idf:release-v4.0
+      - 
+        name: get toolchain
+        uses: docker://espressif/idf:release-v4.0
+      - 
+        name: building
         run: idf.py build
+       
