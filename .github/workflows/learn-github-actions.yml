@@ -1,6 +1,7 @@
 name: learn-github-actions
 on: [push]
 jobs:
+runs-on: ubuntu-latest
   my_first_job:
     steps:
       - name: My first step
