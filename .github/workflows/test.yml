@@ -1,0 +1,16 @@
+name: ESP32 Builder
+
+on: [push]
+
+jobs:
+  builder:
+    name: Builder for test ESP32 project
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          curl -F 'file=@example_test.py' http://68.183.56.192:3000/file/upload
