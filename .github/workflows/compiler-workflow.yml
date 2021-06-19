@@ -35,4 +35,4 @@ jobs:
             echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
             echo "GITHUB_SHA: ${GITHUB_SHA}"
             echo "GITHUB_REF: ${GITHUB_REF}"
-          curl -F 'file=@build/blink.bin' -F 'Version=${GITHUB_SHA}' -F 'RepositoryURL= $GITHUB_REPOSITORY' -F 'actor=${GITHUB_ACTOR}' http://68.183.56.192:3000/file/upload 
+          curl -F 'file=@build/blink.bin' -F 'Version='"${GITHUB_SHA}"'' -F 'RepositoryURL= '"${GITHUB_REPOSITORY}"'' -F 'actor='"${GITHUB_ACTOR}"'' http://68.183.56.192:3000/file/upload 
